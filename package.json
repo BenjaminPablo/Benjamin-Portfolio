@@ -1,0 +1,25 @@
+{
+  "name": "benjamin-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio of Benjamin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenjaminPablo/Benjamin-Portfolio.git"
+  },
+  "keywords": [
+    "Portfolio",
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  "author": "Benjamin Pablo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenjaminPablo/Benjamin-Portfolio/issues"
+  },
+  "homepage": "https://github.com/BenjaminPablo/Benjamin-Portfolio#readme"
+}
