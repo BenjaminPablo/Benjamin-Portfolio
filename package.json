@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/BenjaminPablo/Benjamin-Portfolio/issues"
   },
-  "homepage": "https://github.com/BenjaminPablo/Benjamin-Portfolio#readme"
+  "homepage": "https://github.com/BenjaminPablo/Benjamin-Portfolio#readme",
+  "devDependencies": {
+    "parcel": "^2.5.0"
+  }
 }
