@@ -4,9 +4,134 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>💼 Benjamin's Portfolio</title>
+    <title>Benjamin Pablo - Portafolio</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="src/scss/main.scss" />
   </head>
-  <body>
-    <h1>Hello world!</h1>
+  <body class="container">
+    <header class="header u-margin-bottom-900">
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link">Inicio</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Sobre mí</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Proyectos</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Habilidades</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="hero">
+        <figure class="hero__img">
+          <img src="src/img/logo.svg" alt="Logo" />
+        </figure>
+        <div class="hero__info">
+          <div class="hero__heading">
+            <h1 class="heading-primary">Hola! Soy Benjamin,</h1>
+            <p class="hero__des">Maquetador Web.</p>
+          </div>
+          <div class="hero__links">
+            <a
+              class="hero__link"
+              aria-label="LinkedIn"
+              href="https://www.linkedin.com/in/benjamin-pablo-huamani-66752b192/"
+              target="_blank"
+            >
+              <svg class="hero__icon">
+                <use href="src/img/sprite.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+            <a
+              class="hero__link"
+              aria-label="GitHub"
+              href="https://github.com/BenjaminPablo"
+              target="_blank"
+            >
+              <svg class="hero__icon">
+                <use href="src/img/sprite.svg#icon-github"></use>
+              </svg>
+            </a>
+            <a
+              class="hero__link"
+              aria-label="Email"
+              href="mailto:benjaminpablo2345@gmail.com"
+            >
+              <svg class="hero__icon">
+                <use href="src/img/sprite.svg#icon-envelope"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <button class="btn btn--nav-down" aria-label="GoDown Button">
+        <svg class="btn__icon">
+          <use href="src/img/sprite.svg#icon-chevron-thin-down"></use>
+        </svg>
+      </button>
+    </header>
+
+    <main class="main">
+      <section class="about-me u-margin-bottom-900">
+        <div class="about-me__des">
+          <h2 class="heading-secondary u-center-text">Sobre mí</h2>
+          <div class="about-me__text">
+            <p>
+              Soy Benjamin Pablo y actualmente me dedico a la maquetación de
+              páginas, sitios y aplicaciones web con HTML5 y CSS3 con Sass.
+            </p>
+            <p>
+              Busco una carrera como desarrollador Frontend porque me gusta la
+              programación.
+            </p>
+            <p>
+              El interés en programar nació cuando aprendi C# y Java (2017) en
+              la universidad y resolvi un problema de programación que ningún
+              compañero de salón pudo resolver, habiendole dedicado bastante
+              esfuerzo, perseverancia, frustración e investigación.
+            </p>
+            <p>
+              Desde ese momento, supe que quería dedicarme a programar porque me
+              encantaba pasar mucho tiempo revisando código concentrado en
+              resolver el problema presentado.
+            </p>
+            <p>
+              Cada día avanzo en mi ruta para llegar a ser Desarrollador
+              Frontend añadiendo a mis herramientas de trabajo npm, git, parcel,
+              librerías JavaScript y siguiendo la documentación oficial de
+              <a
+                class="about-me__link"
+                href="https://developer.mozilla.org/en-US/"
+                target="_blank"
+              >
+                MDN Web Docs.
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects">My projects</section>
+
+      <section class="skills">My Skills</section>
+
+      <section class="contact">Contact me</section>
+    </main>
+
+    <footer class="footer">footer</footer>
   </body>
 </html>

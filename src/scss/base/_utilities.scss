@@ -1,0 +1,23 @@
+@use '../abstracts/' as *;
+
+@each $number, $value in $whitespaces {
+  .u-margin-bottom-#{$number} {
+    margin-bottom: $value !important;
+  }
+
+  .u-padding-right-#{$number} {
+    padding-right: $value !important;
+  }
+
+  .u-padding-left-#{$number} {
+    padding-left: $value !important;
+  }
+
+  .u-padding-bottom-#{$number} {
+    padding-bottom: $value !important;
+  }
+}
+
+.u-center-text {
+  text-align: center !important;
+}

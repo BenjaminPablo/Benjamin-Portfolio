@@ -1,0 +1,10 @@
+@use '../abstracts/' as *;
+
+.header {
+  grid-column: full-start / full-end;
+  background-color: var(--clr-primary-100);
+  display: grid;
+  place-items: center;
+  padding: 4.8rem 0;
+  min-height: 100vh;
+}

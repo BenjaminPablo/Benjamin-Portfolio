@@ -1,0 +1,21 @@
+@use '../abstracts/' as *;
+
+.nav {
+  align-self: start;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+  }
+
+  &__item {
+    font-size: 1.8rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+}

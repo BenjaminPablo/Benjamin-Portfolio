@@ -1,0 +1,41 @@
+@use '../abstracts/' as *;
+
+.main {
+  display: grid;
+  grid-template-columns: $grid-columns;
+  grid-template-rows: min-content 40vw min-content 40vw;
+  grid-column: full-start / full-end;
+
+  .about-me {
+    grid-column: col-start 2 / col-end 7;
+
+    &__des {
+      display: grid;
+      row-gap: var(--gap-300);
+    }
+
+    &__text {
+      display: grid;
+      row-gap: var(--gap-200);
+    }
+
+    &__link {
+      text-decoration: none;
+    }
+  }
+
+  .projects {
+    background-color: orangered;
+    grid-column: center-start / center-end;
+  }
+
+  .skills {
+    background-color: #8d6541;
+    grid-column: center-start / center-end;
+  }
+
+  .contact {
+    background-color: orange;
+    grid-column: center-start / center-end;
+  }
+}

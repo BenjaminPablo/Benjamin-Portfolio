@@ -1,0 +1,28 @@
+@use '../abstracts/' as *;
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--fs-300);
+  color: var(--clr-neutral-800);
+  line-height: var(--lh-400);
+  font-weight: var(--fw-400);
+}
+
+.heading-primary {
+  font-size: var(--fs-800);
+  font-weight: var(--fw-700);
+  line-height: var(--lh-200);
+}
+
+.heading-secondary {
+  font-size: var(--fs-600);
+}
+
+.heading-tertiary {
+  font-size: var(--fs-700);
+}
+
+.heading-quaternary {
+  font-size: var(--fs-600);
+  line-height: var(--lh-300);
+}

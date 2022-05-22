@@ -1,0 +1,53 @@
+@use '../abstracts/' as *;
+
+.hero {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6.4rem;
+  background-color: var(--clr-primary-700);
+  border-radius: 2rem;
+  padding: 6.4rem 8rem;
+
+  &__img {
+    img {
+      border-radius: 2rem;
+      display: block;
+      height: 30rem;
+    }
+  }
+
+  &__info {
+    display: grid;
+    gap: 6.4rem;
+  }
+
+  &__heading {
+    display: grid;
+    gap: 1.6rem;
+  }
+
+  &__des {
+    font-size: var(--fs-500);
+    font-weight: var(--fw-400);
+  }
+
+  &__links {
+    display: flex;
+    gap: 2.4rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    line-height: 0;
+  }
+
+  &__icon {
+    width: 3.6rem;
+    height: 3.6rem;
+    fill: #fff;
+  }
+}

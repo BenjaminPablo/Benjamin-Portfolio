@@ -1,0 +1,20 @@
+@use '../abstracts/' as a;
+
+.btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &--nav-down {
+    &__icon {
+      cursor: pointer;
+      svg {
+        align-self: end;
+        width: 4rem;
+        height: 4rem;
+        object-fit: cover;
+        fill: var(--clr-primary-700);
+      }
+    }
+  }
+}

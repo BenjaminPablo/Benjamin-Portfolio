@@ -1,15 +1,91 @@
+// TYPE SCALE
+$font-sizes: (
+  300: 2rem,
+  400: 2.4rem,
+  500: 3rem,
+  600: 3.6rem,
+  700: 4.4rem,
+  800: 5.2rem,
+);
+
+// WHITESPACE
+$whitespaces: (
+  900: 12.8rem,
+  800: 9.6rem,
+  700: 8rem,
+  600: 6.4rem,
+  500: 4.8rem,
+  400: 3.2rem,
+  300: 2.4rem,
+  200: 1.6rem,
+  100: 1.2rem,
+);
+
+// FONT WEIGHT
+$font-weights: (
+  300: 300,
+  400: 400,
+  500: 500,
+  600: 600,
+  700: 700,
+);
+
+// line height
+$line-heights: (
+  100: 0,
+  200: 1.2,
+  300: 1.31,
+  400: 1.6,
+);
+
 // COLORS
-$color-primary: #826f66;
-$color-primary-light: #8f7d75;
-$color-primary-dark: #75645c;
+$colors: (
+  'primary': (
+    100: hsl(27, 37%, 90%),
+    200: hsl(27, 37%, 80%),
+    300: hsl(27, 37%, 70%),
+    400: hsl(27, 37%, 60%),
+    500: hsl(27, 37%, 50%),
+    600: hsl(27, 37%, 40%),
+    700: hsl(27, 37%, 30%),
+    800: hsl(27, 37%, 20%),
+    900: hsl(27, 37%, 10%),
+  ),
+  'neutral': (
+    100: hsl(21, 100%, 5%),
+    200: hsl(21, 90%, 5%),
+    300: hsl(21, 80%, 5%),
+    700: hsl(21, 70%, 5%),
+    800: hsl(21, 60%, 5%),
+    900: hsl(21, 50%, 5%),
+  ),
+);
 
-$color-grey: #221305;
-$color-grey-light-1: #382b1e;
-$color-grey-dark-1: #1f1105;
+// GRID SYSTEM
+$grid-columns: [full-start] minmax(7rem, 1fr) [center-start]
+  repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end]
+  minmax(7rem, 1fr) [full-end];
 
-$color-white: #ffffff;
-$color-black: #000;
+:root {
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
 
-// FONT VARIABLES
-$font-primary: 'Open Sans', sans-serif;
-$default-font-size: 2rem;
+  @each $font-size, $value in $font-sizes {
+    --fs-#{$font-size}: #{$value};
+  }
+
+  @each $font-weight, $value in $font-weights {
+    --fw-#{$font-weight}: #{$value};
+  }
+
+  @each $line-height, $value in $line-heights {
+    --lh-#{$line-height}: #{$value};
+  }
+
+  @each $gap, $value in $whitespaces {
+    --gap-#{$gap}: #{$value};
+  }
+}
