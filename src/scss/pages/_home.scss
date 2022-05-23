@@ -8,19 +8,28 @@
 
   .about-me {
     grid-column: col-start 2 / col-end 7;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
 
     &__des {
       display: grid;
-      row-gap: var(--gap-300);
+      row-gap: var(--gap-600);
     }
 
     &__text {
       display: grid;
-      row-gap: var(--gap-200);
+      row-gap: var(--gap-400);
+      font-size: var(--fs-300);
+      color: var(--clr-neutral-300);
     }
 
     &__link {
       text-decoration: none;
+      color: var(--clr-primary-900);
+      font-weight: var(--fw-500);
+      padding-bottom: 0.2rem;
+      border-bottom: 0.2rem solid var(--clr-primary-900);
     }
   }
 
