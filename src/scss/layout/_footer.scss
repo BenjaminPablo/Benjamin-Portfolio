@@ -1,4 +1,28 @@
 .footer {
-  background-color: chocolate;
-  grid-column: center-start / center-end;
+  grid-column: full-start / full-end;
+  background-color: var(--clr-primary-100);
+  display: flex;
+  gap: var(--gap-900);
+  justify-content: center;
+  padding: 3rem;
+
+  &__list {
+    display: flex;
+    gap: var(--gap-400);
+  }
+
+  &__icons {
+    display: flex;
+    gap: var(--gap-300);
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__icon {
+    width: 3rem;
+    height: 3rem;
+    fill: var(--clr-primary-700);
+  }
 }

@@ -4,11 +4,56 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+  font-family: inherit;
+  color: white;
+
+  &--primary {
+    font-size: var(--fs-300);
+    font-weight: var(--fw-500);
+    padding: 0.8rem 1.6rem;
+    border-radius: 1rem;
+    background-color: var(--clr-primary-700);
+  }
+
+  &--left {
+    position: absolute;
+    inset: auto auto auto 8rem;
+  }
+
+  &--right {
+    position: absolute;
+    inset: auto 8rem auto auto;
+  }
+
+  &__tag {
+    color: #645a50;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    padding: 0.4rem 1.4rem;
+    font-size: var(--fs-200);
+    font-weight: var(--fw-600);
+
+    &--1 {
+      background-color: #f76707;
+    }
+
+    &--2 {
+      background-color: #f783ac;
+    }
+
+    &--3 {
+      background-color: #ffd43b;
+    }
+  }
 
   &__icon {
     width: 4rem;
     height: 4rem;
     object-fit: cover;
     fill: var(--clr-primary-700);
+
+    &--white {
+      fill: white;
+    }
   }
 }

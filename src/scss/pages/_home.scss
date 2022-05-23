@@ -24,30 +24,105 @@
       color: var(--clr-neutral-300);
     }
 
-    &__link {
+    &__link:link,
+    &__link:visited {
       text-decoration: none;
-      color: var(--clr-primary-900);
+      color: var(--clr-primary-700);
       font-weight: var(--fw-500);
       padding-bottom: 0.2rem;
-      border-bottom: 0.2rem solid var(--clr-primary-900);
+      border-bottom: 0.2rem solid var(--clr-primary-700);
     }
   }
 
   .projects {
-    background-image: url('../img/portfolio__forkify.webp');
-    background-position: center;
+    background-image: linear-gradient(
+        hsl(27, 37%, 10%, 0.6),
+        hsl(27, 37%, 10%, 0.6)
+      ),
+      url('../img/portfolio__forkify.webp');
+    background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
-    grid-column: center-start / center-end;
+    grid-column: full-start / full-end;
+    padding: 8rem 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    gap: 5rem;
+
+    &__heading {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-400);
+    }
+
+    &__des {
+      color: white;
+      font-size: var(--fs-400);
+    }
+
+    &__btns {
+      display: flex;
+      gap: var(--gap-200);
+    }
   }
 
   .skills {
-    background-color: #8d6541;
-    grid-column: center-start / center-ennpmd;
+    grid-column: center-start / center-end;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--gap-900);
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+      place-items: center;
+      column-gap: var(--gap-300);
+      row-gap: var(--gap-800);
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-400);
+      align-items: center;
+    }
+
+    &__title {
+      font-size: var(--fs-400);
+    }
   }
 
   .contact {
-    background-color: orange;
-    grid-column: center-start / center-end;
+    background-image: linear-gradient(
+        hsl(27, 37%, 10%, 0.3),
+        hsl(27, 37%, 10%, 0.3)
+      ),
+      url('../img/contact-me.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: full-start / full-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    gap: var(--gap-700);
+
+    &__heading {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-400);
+    }
+
+    &__des {
+      font-size: var(--fs-400);
+    }
   }
 }

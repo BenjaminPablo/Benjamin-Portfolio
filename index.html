@@ -36,7 +36,7 @@
       </nav>
 
       <section class="hero">
-        <figure class="hero__img">
+        <figure class="hero___img">
           <img src="src/img/logo.svg" alt="Logo" />
         </figure>
         <div class="hero__info">
@@ -80,7 +80,7 @@
 
       <button class="btn" aria-label="GoDown Button">
         <svg class="btn__icon">
-          <use href="src/img/sprite.svg#icon-chevron-thin-down"></use>
+          <use href="src/img/sprite.svg#icon-chevron-down"></use>
         </svg>
       </button>
     </header>
@@ -99,8 +99,8 @@
               programación.
             </p>
             <p>
-              El interés en programar nació cuando aprendi C# y Java (2017) en
-              la universidad y resolvi un problema de programación que ningún
+              El interés en programar nació aprendiendo C# y Java (2017) en la
+              universidad cuando resolvi un problema de programación que ningún
               compañero de salón pudo resolver, habiendole dedicado bastante
               esfuerzo, perseverancia, frustración e investigación.
             </p>
@@ -110,10 +110,10 @@
               resolver el problema presentado.
             </p>
             <p>
-              Cada día avanzo la ruta para llegar a ser Desarrollador Frontend
-              aprendiendo nuevas herramientas tecnológicas como npm, git,
-              parcel, librerías JavaScript y siguiendo la documentación oficial
-              de
+              Cada día avanzo en la ruta para llegar a ser Desarrollador
+              Frontend aprendiendo nuevas herramientas tecnológicas como npm,
+              git, parcel, librerías JavaScript y siguiendo la documentación
+              oficial de
               <a
                 class="about-me__link"
                 href="https://developer.mozilla.org/en-US/"
@@ -127,21 +127,164 @@
       </section>
 
       <section class="projects">
-        <button class="btn btn--secondary">Destacado</button>
-        <h2 class="heading-secondary">Forkify</h2>
-        <p class="projects__text">App para buscar y subir recetas</p>
-        <button class="btn btn--tag">HTML5</button>
-        <button class="btn btn--tag">Sass</button>
-        <button class="btn btn--tag">JavaScript</button>
-        <button class="btn btn--left" aria-label="Goleft button"></button>
-        <button class="btn btn--right" aria-label="Goright button"></button>
+        <div class="projects__heading">
+          <h2 class="heading-secondary heading-secondary--white">Forkify</h2>
+          <p class="projects__des">App para buscar y subir recetas</p>
+        </div>
+        <div class="projects__btns">
+          <button class="btn btn__tag btn__tag--1">HTML5</button>
+          <button class="btn btn__tag btn__tag--2">Sass</button>
+          <button class="btn btn__tag btn__tag--3">JavaScript</button>
+        </div>
+
+        <button class="btn btn--left" aria-label="Goleft button">
+          <svg class="btn__icon btn__icon--white">
+            <use href="src/img/sprite.svg#icon-chevron-left"></use>
+          </svg>
+        </button>
+        <button class="btn btn--right" aria-label="Goright button">
+          <svg class="btn__icon btn__icon--white">
+            <use href="src/img/sprite.svg#icon-chevron-right"></use>
+          </svg>
+        </button>
       </section>
 
-      <section class="skills">My Skills</section>
+      <section class="skills">
+        <h2 class="heading-secondary u-center-text">Mis habilidades</h2>
+        <div class="skills__list">
+          <figure class="skills__item">
+            <img
+              src="src/img/HTML5.svg"
+              alt="skill image 1"
+              class="skills__img"
+            />
+            <figcaption class="skills__title">HTML5</figcaption>
+          </figure>
+          <figure class="skills__item">
+            <img
+              src="src/img/CSS.svg"
+              alt="skill image 2"
+              class="skills__img"
+            />
+            <figcaption class="skills__title">CSS3</figcaption>
+          </figure>
+          <figure class="skills__item">
+            <img
+              src="src/img/Sass.svg"
+              alt="skill image 3"
+              class="skills__img"
+            />
+            <figcaption class="skills__title">Sass</figcaption>
+          </figure>
+          <figure class="skills__item">
+            <img
+              src="src/img/JavaScript.svg"
+              alt="skill image 4"
+              class="skills__img"
+            />
+            <figcaption class="skills__title">JavaScript</figcaption>
+          </figure>
+          <figure class="skills__item">
+            <img
+              src="src/img/npm.svg"
+              alt="skill image 5"
+              class="skills__img"
+            />
+            <figcaption class="skills__title">NPM</figcaption>
+          </figure>
+          <figure class="skills__item">
+            <img
+              src="src/img/parcel.svg"
+              alt="skill image 6"
+              class="skills__img"
+            />
+            <figcaption class="skills__title">Parcel</figcaption>
+          </figure>
+          <figure class="skills__item">
+            <img
+              src="src/img/git.svg"
+              alt="skill image 7"
+              class="skills__img"
+            />
+            <figcaption class="skills__title">Git</figcaption>
+          </figure>
+          <figure class="skills__item">
+            <img
+              src="src/img/Github.svg"
+              alt="skill image 8"
+              class="skills__img"
+            />
+            <figcaption class="skills__title">Github</figcaption>
+          </figure>
+        </div>
+      </section>
 
-      <section class="contact">Contact me</section>
+      <section class="contact">
+        <div class="contact__heading">
+          <h2 class="heading-secondary heading-secondary--white">
+            Envíame un mensaje
+          </h2>
+          <p class="contact__des">
+            Disponibilidad inmediata en nuevas oportunidades de trabajo para
+            aportar valor con mis habilidades aprendidas.
+          </p>
+        </div>
+        <button class="btn btn--primary">Contactame</button>
+      </section>
     </main>
 
-    <footer class="footer">footer</footer>
+    <footer class="footer">
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            Hecho por
+            <a href="#" class="nav__link">Benjamin Pablo</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Sobre mí</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Proyectos</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Habilidades</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="footer__icons">
+        <a
+          class="footer__link"
+          aria-label="LinkedIn"
+          href="https://www.linkedin.com/in/benjamin-pablo-huamani-66752b192/"
+          target="_blank"
+        >
+          <svg class="footer__icon">
+            <use href="src/img/sprite.svg#icon-linkedin"></use>
+          </svg>
+        </a>
+        <a
+          class="footer__link"
+          aria-label="GitHub"
+          href="https://github.com/BenjaminPablo"
+          target="_blank"
+        >
+          <svg class="footer__icon">
+            <use href="src/img/sprite.svg#icon-github"></use>
+          </svg>
+        </a>
+        <a
+          class="footer__link"
+          aria-label="Email"
+          href="mailto:benjaminpablo2345@gmail.com"
+        >
+          <svg class="footer__icon">
+            <use href="src/img/sprite.svg#icon-envelope"></use>
+          </svg>
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
