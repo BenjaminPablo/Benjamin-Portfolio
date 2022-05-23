@@ -34,7 +34,10 @@
   }
 
   .projects {
-    background-image: url('../src/img/omnifood.png');
+    background-image: url('../img/portfolio__forkify.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     grid-column: center-start / center-end;
   }
 
