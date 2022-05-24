@@ -13,6 +13,17 @@
     padding: 0.8rem 1.6rem;
     border-radius: 1rem;
     background-color: var(--clr-primary-700);
+    transform: scale(1);
+    transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+    &:hover {
+      transform: scale(1.2);
+      background-color: var(--clr-primary-600);
+    }
+
+    &:active {
+      transform: scale(1.1);
+    }
   }
 
   &--left {
@@ -25,35 +36,23 @@
     inset: auto 8rem auto auto;
   }
 
-  &__tag {
-    color: #645a50;
-    text-transform: uppercase;
-    border-radius: 1rem;
-    padding: 0.4rem 1.4rem;
-    font-size: var(--fs-200);
-    font-weight: var(--fw-600);
-
-    &--1 {
-      background-color: #f76707;
-    }
-
-    &--2 {
-      background-color: #f783ac;
-    }
-
-    &--3 {
-      background-color: #ffd43b;
-    }
-  }
-
   &__icon {
     width: 4rem;
     height: 4rem;
     object-fit: cover;
-    fill: var(--clr-primary-700);
+    transition: scale(1);
+    transition: all 0.1s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+
+    &--down {
+      fill: var(--clr-primary-700);
+    }
 
     &--white {
       fill: white;
+    }
+
+    &:hover {
+      fill: var(--clr-primary-400);
     }
   }
 }

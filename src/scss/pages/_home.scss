@@ -31,6 +31,12 @@
       font-weight: var(--fw-500);
       padding-bottom: 0.2rem;
       border-bottom: 0.2rem solid var(--clr-primary-700);
+      transition: all 0.2s ease-in-out;
+    }
+
+    &__link:hover {
+      color: var(--clr-primary-400);
+      border-bottom: 0.2rem solid var(--clr-primary-400);
     }
   }
 
@@ -63,9 +69,30 @@
       font-size: var(--fs-400);
     }
 
-    &__btns {
+    &__tags {
       display: flex;
       gap: var(--gap-200);
+    }
+
+    &__tag {
+      color: #645a50;
+      text-transform: uppercase;
+      border-radius: 1rem;
+      font-size: var(--fs-200);
+      font-weight: var(--fw-600);
+      padding: 0.4rem 1.4rem;
+
+      &--1 {
+        background-color: #f76707;
+      }
+
+      &--2 {
+        background-color: #f783ac;
+      }
+
+      &--3 {
+        background-color: #ffd43b;
+      }
     }
   }
 
@@ -94,6 +121,17 @@
 
     &__title {
       font-size: var(--fs-400);
+    }
+
+    &__img {
+      opacity: 0.3;
+      transform: scale(1);
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        opacity: 1;
+        transform: scale(1.2);
+      }
     }
   }
 

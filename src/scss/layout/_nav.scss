@@ -12,10 +12,17 @@
 
   &__item {
     font-size: 1.8rem;
+    &:not(:first-child):hover {
+      color: var(--clr-primary-500);
+      transform: scale(1.1);
+    }
   }
 
-  &__link {
+  &__link:link,
+  &__link:visited {
     text-decoration: none;
     color: inherit;
+    transform: scale(1);
+    transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 }
