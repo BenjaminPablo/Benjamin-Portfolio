@@ -5,6 +5,15 @@
   background-color: var(--clr-primary-100);
   display: grid;
   place-items: center;
-  padding: 4.8rem 0;
+  padding: 4.8rem;
   min-height: 100vh;
+  margin-bottom: var(--gap-900);
+
+  @include respond(tab-port) {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-900);
+    justify-content: center;
+  }
 }

@@ -3,40 +3,51 @@
 .main {
   display: grid;
   grid-template-columns: $grid-columns;
-  grid-template-rows: min-content 40vw min-content 40vw;
+  grid-template-rows: min-content 54vw min-content 44vw;
   grid-column: full-start / full-end;
+
+  @include respond(tab-port) {
+  }
 
   .about-me {
     grid-column: col-start 2 / col-end 7;
-    min-height: 100vh;
     display: grid;
     place-content: center;
+    margin-bottom: var(--gap-900);
 
     &__des {
       display: grid;
       row-gap: var(--gap-600);
     }
 
-    &__text {
+    &__list {
       display: grid;
       row-gap: var(--gap-400);
       font-size: var(--fs-300);
       color: var(--clr-neutral-300);
     }
 
-    &__link:link,
-    &__link:visited {
-      text-decoration: none;
-      color: var(--clr-primary-700);
-      font-weight: var(--fw-500);
-      padding-bottom: 0.2rem;
-      border-bottom: 0.2rem solid var(--clr-primary-700);
-      transition: all 0.2s ease-in-out;
+    &__text {
+      opacity: 0.8;
     }
 
-    &__link:hover {
-      color: var(--clr-primary-400);
-      border-bottom: 0.2rem solid var(--clr-primary-400);
+    &__link {
+      &:link,
+      &:visited {
+        display: inline-block;
+        text-decoration: none;
+        font-weight: var(--fw-500);
+        color: var(--clr-neutral-800);
+        border-bottom: 0.2rem solid var(--clr-neutral-800);
+        transform: scale(1);
+        transition: all 0.2s ease-in-out;
+      }
+
+      &:hover {
+        color: var(--clr-primary-600);
+        transform: scale(1.05);
+        border-bottom: 0.2rem solid var(--clr-primary-600);
+      }
     }
   }
 
@@ -57,6 +68,7 @@
     align-items: start;
     position: relative;
     gap: 5rem;
+    margin-bottom: var(--gap-900);
 
     &__heading {
       display: flex;
@@ -98,11 +110,11 @@
 
   .skills {
     grid-column: center-start / center-end;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: var(--gap-900);
+    margin-bottom: var(--gap-900);
 
     &__list {
       display: grid;
@@ -117,6 +129,12 @@
       flex-direction: column;
       gap: var(--gap-400);
       align-items: center;
+      opacity: 0.3;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        opacity: 1;
+      }
     }
 
     &__title {
@@ -124,12 +142,10 @@
     }
 
     &__img {
-      opacity: 0.3;
       transform: scale(1);
-      transition: all 0.2s ease-in-out;
+      transition: all 0.1s ease-in-out;
 
       &:hover {
-        opacity: 1;
         transform: scale(1.2);
       }
     }
@@ -137,8 +153,8 @@
 
   .contact {
     background-image: linear-gradient(
-        hsl(27, 37%, 10%, 0.3),
-        hsl(27, 37%, 10%, 0.3)
+        hsl(27, 37%, 10%, 0.7),
+        hsl(27, 37%, 10%, 0.7)
       ),
       url('../img/contact-me.webp');
     background-position: center;
@@ -160,7 +176,7 @@
     }
 
     &__des {
-      font-size: var(--fs-400);
+      opacity: 0.9;
     }
   }
 }

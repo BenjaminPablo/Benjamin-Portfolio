@@ -3,26 +3,43 @@
 .nav {
   align-self: start;
 
+  @include respond(tab-port) {
+    align-self: center;
+  }
+
+  @include respond(phone) {
+    display: none;
+  }
+
   &__list {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 8rem;
-  }
 
-  &__item {
-    font-size: 1.8rem;
-    &:not(:first-child):hover {
-      color: var(--clr-primary-500);
-      transform: scale(1.1);
+    &--down {
+      gap: var(--gap-400);
     }
   }
 
-  &__link:link,
-  &__link:visited {
-    text-decoration: none;
-    color: inherit;
-    transform: scale(1);
-    transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  &__item {
+    font-size: 1.6rem;
+  }
+
+  &__link {
+    display: inline-block;
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: inherit;
+      transform: scale(1);
+      transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    &:hover,
+    &:active {
+      color: var(--clr-primary-600);
+      transform: scale(1.1);
+    }
   }
 }

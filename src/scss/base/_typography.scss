@@ -12,6 +12,10 @@ body {
   font-size: var(--fs-800);
   font-weight: var(--fw-700);
   line-height: var(--lh-200);
+
+  @include respond(phone) {
+    font-size: 5rem;
+  }
 }
 
 .heading-secondary {

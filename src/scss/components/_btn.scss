@@ -1,11 +1,42 @@
-@use '../abstracts/' as a;
+@use '../abstracts/' as *;
 
 .btn {
   border: none;
   background-color: transparent;
   cursor: pointer;
   font-family: inherit;
+  transform: scale(1);
   color: white;
+
+  &--down {
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+    fill: var(--clr-primary-700);
+    transition: all 0.1s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+
+    &--primary {
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+
+    &--white {
+      fill: white;
+      &:hover {
+        transform: scale(1);
+      }
+    }
+
+    &:hover {
+      fill: var(--clr-primary-400);
+    }
+  }
 
   &--primary {
     font-size: var(--fs-300);
@@ -17,7 +48,7 @@
     transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
 
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.1);
       background-color: var(--clr-primary-600);
     }
 
@@ -34,25 +65,5 @@
   &--right {
     position: absolute;
     inset: auto 8rem auto auto;
-  }
-
-  &__icon {
-    width: 4rem;
-    height: 4rem;
-    object-fit: cover;
-    transition: scale(1);
-    transition: all 0.1s cubic-bezier(0.6, 0.04, 0.98, 0.335);
-
-    &--down {
-      fill: var(--clr-primary-700);
-    }
-
-    &--white {
-      fill: white;
-    }
-
-    &:hover {
-      fill: var(--clr-primary-400);
-    }
   }
 }

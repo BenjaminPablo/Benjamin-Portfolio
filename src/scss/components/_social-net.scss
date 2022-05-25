@@ -1,0 +1,35 @@
+@use '../abstracts/' as *;
+
+.social-net {
+  display: flex;
+  gap: 2.4rem;
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      line-height: 0;
+      opacity: 0.7;
+      transform: scale(1);
+      transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    &:hover,
+    &:active {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  }
+
+  &__icon {
+    width: 3.4rem;
+    height: 3.4rem;
+    fill: #fff;
+
+    &--brown {
+      fill: var(--clr-primary-700);
+    }
+  }
+}

@@ -9,54 +9,49 @@
   border-radius: 2rem;
   padding: 6.4rem 8rem;
 
+  @include respond(tab-land) {
+    padding: 5rem;
+  }
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: var(--gap-900);
+  }
+
   &__img {
     img {
       border-radius: 2rem;
       display: block;
-      height: 30rem;
+      height: 25rem;
+
+      @include respond(tab-port) {
+        display: none;
+      }
     }
   }
 
   &__info {
     display: grid;
     gap: 6.4rem;
+
+    @include respond(tab-port) {
+      place-items: center;
+    }
   }
 
   &__heading {
     display: grid;
     gap: 1.6rem;
+
+    @include respond(tab-port) {
+      place-items: center;
+    }
   }
 
   &__des {
-    font-size: var(--fs-500);
+    font-size: 2.7rem;
     font-weight: var(--fw-400);
-  }
-
-  &__links {
-    display: flex;
-    gap: 2.4rem;
-  }
-
-  &__link:link,
-  &__link:visited {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    line-height: 0;
-    opacity: 1;
-    transform: scale(1);
-    transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
-  }
-
-  &__link:hover,
-  &__link:active {
-    opacity: 0.7;
-    transform: scale(1.1);
-  }
-
-  &__icon {
-    width: 3.6rem;
-    height: 3.6rem;
-    fill: #fff;
+    opacity: 0.9;
   }
 }
