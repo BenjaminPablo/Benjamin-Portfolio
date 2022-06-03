@@ -14,29 +14,6 @@
     <link rel="stylesheet" href="src/scss/main.scss" />
   </head>
   <body class="container">
-    <button class="btn btn--menu-mobile">
-      <div class="nav__background">&nbsp;</div>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="#" class="nav__link">Inicio</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Sobre mí</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Proyectos</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Habilidades</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Contacto</a>
-          </li>
-        </ul>
-      </nav>
-    </button>
-
     <header class="header">
       <nav class="nav">
         <ul class="nav__list">
@@ -56,6 +33,17 @@
             <a href="#" class="nav__link">Contacto</a>
           </li>
         </ul>
+        <button class="btn btn__mobile" aria-label="btnMobile">
+          <svg class="btn__icon btn__icon--open">
+            <use href="src/img/sprite.svg#icon-menu"></use>
+          </svg>
+          <svg class="btn__icon btn__icon--close">
+            <use href="src/img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="nav__background" aria-label="btnMobileBackground">
+          &nbsp;
+        </div>
       </nav>
 
       <section class="hero">
@@ -309,5 +297,7 @@
         </a>
       </div>
     </footer>
+
+    <script src="src/js/script.js"></script>
   </body>
 </html>

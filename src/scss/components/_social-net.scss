@@ -4,6 +4,10 @@
   display: flex;
   gap: 2.4rem;
 
+  @include respond(phone) {
+    display: none;
+  }
+
   &__link {
     &:link,
     &:visited {

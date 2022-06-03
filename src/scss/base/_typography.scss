@@ -15,6 +15,7 @@ body {
 
   @include respond(phone) {
     font-size: 5rem;
+    text-align: center;
   }
 }
 

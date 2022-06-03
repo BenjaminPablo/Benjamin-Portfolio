@@ -19,6 +19,12 @@
     margin-bottom: var(--gap-900);
   }
 
+  @include respond(phone) {
+    width: 100%;
+    border-radius: 0;
+    padding: 7rem 3rem;
+  }
+
   &__img {
     img {
       border-radius: 2rem;

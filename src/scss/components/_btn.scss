@@ -7,6 +7,24 @@
   font-family: inherit;
   transform: scale(1);
   color: white;
+  display: block;
+
+  &__mobile {
+    display: none;
+
+    @include respond(phone) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      height: 7rem;
+      width: 7rem;
+      position: relative;
+      border-radius: 50%;
+      z-index: 4;
+      box-shadow: 0 1rem 3rem rgba(black, 0.1);
+    }
+  }
 
   &--down {
     @include respond(tab-port) {
@@ -35,6 +53,29 @@
 
     &:hover {
       fill: var(--clr-primary-400);
+    }
+
+    &--mobile {
+      &,
+      &::before,
+      &::after {
+        width: 3rem;
+        height: 0.2rem;
+        background-color: var(--clr-primary-700);
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+      }
+    }
+
+    &--close {
+      display: none;
     }
   }
 

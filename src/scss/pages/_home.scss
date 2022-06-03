@@ -6,9 +6,6 @@
   grid-template-rows: min-content 54vw min-content 44vw;
   grid-column: full-start / full-end;
 
-  @include respond(tab-port) {
-  }
-
   .about-me {
     grid-column: col-start 2 / col-end 7;
     display: grid;
@@ -69,6 +66,10 @@
     position: relative;
     gap: 5rem;
     margin-bottom: var(--gap-900);
+
+    @include respond(phone) {
+      padding: 3rem;
+    }
 
     &__heading {
       display: flex;
@@ -135,6 +136,10 @@
       &:hover {
         opacity: 1;
       }
+
+      &:hover .skills__img {
+        transform: scale(1.2);
+      }
     }
 
     &__title {
@@ -144,10 +149,6 @@
     &__img {
       transform: scale(1);
       transition: all 0.1s ease-in-out;
-
-      &:hover {
-        transform: scale(1.2);
-      }
     }
   }
 
