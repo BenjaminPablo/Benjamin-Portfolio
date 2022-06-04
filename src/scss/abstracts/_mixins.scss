@@ -5,8 +5,8 @@
 0 - 600px:      Phone
 600 - 900px:    Tablet portrait
 900 - 1200px:   Tablet landscape
-[1200 - 1800px] is where our normal styles apply
-1800px + : Big desktop
+[1200 - 2000px] is where our normal styles apply
+2000px + : Big desktop
 
 $breakpoint argument choices:
 - phone
@@ -39,7 +39,7 @@ ORDER to add Media Queries: Base + typography > general layout + grid > page lay
   }
   @if $breakpoint == big-desktop {
     @media only screen and (min-width: 125em) {
-      // 1800px
+      // 2000px
       @content;
     }
   }

@@ -8,9 +8,11 @@
 
   .about-me {
     grid-column: col-start 2 / col-end 7;
-    display: grid;
-    place-content: center;
     margin-bottom: var(--gap-900);
+
+    @include respond(tab-port) {
+      grid-column: full-start / full-end;
+    }
 
     &__des {
       display: grid;
@@ -22,6 +24,10 @@
       row-gap: var(--gap-400);
       font-size: var(--fs-300);
       color: var(--clr-neutral-300);
+
+      @include respond(phone) {
+        padding: 0 3rem;
+      }
     }
 
     &__text {
@@ -66,6 +72,10 @@
     position: relative;
     gap: 5rem;
     margin-bottom: var(--gap-900);
+
+    @include respond(tab-land) {
+      padding: 6rem 20rem;
+    }
 
     @include respond(phone) {
       padding: 3rem;
