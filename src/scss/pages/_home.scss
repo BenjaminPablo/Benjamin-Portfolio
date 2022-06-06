@@ -3,12 +3,24 @@
 .main {
   display: grid;
   grid-template-columns: $grid-columns;
-  grid-template-rows: min-content 54vw min-content 44vw;
+  grid-template-rows: min-content 44vw min-content 44vw;
   grid-column: full-start / full-end;
+  row-gap: var(--gap-900);
+
+  @include respond(tab-land) {
+    grid-template-rows: min-content 70vw min-content 70vw;
+  }
+
+  @include respond(tab-port) {
+    grid-template-rows: min-content 90vw min-content 90vw;
+  }
+
+  @include respond(phone) {
+    grid-template-rows: min-content min-content 90vw min-content 90vw;
+  }
 
   .about-me {
     grid-column: col-start 2 / col-end 7;
-    margin-bottom: var(--gap-900);
 
     @include respond(tab-port) {
       grid-column: full-start / full-end;
@@ -25,7 +37,7 @@
       font-size: var(--fs-300);
       color: var(--clr-neutral-300);
 
-      @include respond(phone) {
+      @include respond(tab-port) {
         padding: 0 3rem;
       }
     }
@@ -54,78 +66,12 @@
     }
   }
 
-  .projects {
-    background-image: linear-gradient(
-        hsl(27, 37%, 10%, 0.6),
-        hsl(27, 37%, 10%, 0.6)
-      ),
-      url('../img/portfolio__forkify.webp');
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    grid-column: full-start / full-end;
-    padding: 8rem 30rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    position: relative;
-    gap: 5rem;
-    margin-bottom: var(--gap-900);
-
-    @include respond(tab-land) {
-      padding: 6rem 20rem;
-    }
-
-    @include respond(phone) {
-      padding: 3rem;
-    }
-
-    &__heading {
-      display: flex;
-      flex-direction: column;
-      gap: var(--gap-400);
-    }
-
-    &__des {
-      color: white;
-      font-size: var(--fs-400);
-    }
-
-    &__tags {
-      display: flex;
-      gap: var(--gap-200);
-    }
-
-    &__tag {
-      color: #645a50;
-      text-transform: uppercase;
-      border-radius: 1rem;
-      font-size: var(--fs-200);
-      font-weight: var(--fw-600);
-      padding: 0.4rem 1.4rem;
-
-      &--1 {
-        background-color: #f76707;
-      }
-
-      &--2 {
-        background-color: #f783ac;
-      }
-
-      &--3 {
-        background-color: #ffd43b;
-      }
-    }
-  }
-
   .skills {
     grid-column: center-start / center-end;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: var(--gap-900);
-    margin-bottom: var(--gap-900);
 
     &__list {
       display: grid;
@@ -179,6 +125,7 @@
     color: white;
     text-align: center;
     gap: var(--gap-700);
+    padding: 7rem 3rem;
 
     &__heading {
       display: flex;
@@ -188,6 +135,10 @@
 
     &__des {
       opacity: 0.9;
+
+      @include respond(phone) {
+        display: none;
+      }
     }
   }
 }

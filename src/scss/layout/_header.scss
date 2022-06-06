@@ -20,5 +20,6 @@
 
   @include respond(phone) {
     padding: 0;
+    gap: var(--gap-500);
   }
 }

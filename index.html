@@ -16,35 +16,34 @@
   <body class="container">
     <header class="header">
       <nav class="nav">
-        <ul class="nav__list">
+        <ul class="nav__list nav__list--main">
           <li class="nav__item">
             <a href="#" class="nav__link">Inicio</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Sobre mí</a>
+            <a href="#section--1" class="nav__link">Sobre mí</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Proyectos</a>
+            <a href="#section--2" class="nav__link">Proyectos</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Habilidades</a>
+            <a href="#section--3" class="nav__link">Habilidades</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Contacto</a>
+            <a href="#section--4" class="nav__link">Contacto</a>
           </li>
         </ul>
-        <button class="btn btn__mobile" aria-label="btnMobile">
-          <svg class="btn__icon btn__icon--open">
-            <use href="src/img/sprite.svg#icon-menu"></use>
-          </svg>
-          <svg class="btn__icon btn__icon--close">
-            <use href="src/img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-        <div class="nav__background" aria-label="btnMobileBackground">
-          &nbsp;
-        </div>
       </nav>
+
+      <button class="btn btn--mobile" aria-label="btnMobile">
+        <svg class="btn__icon btn__icon--open">
+          <use href="src/img/sprite.svg#icon-menu"></use>
+        </svg>
+        <svg class="btn__icon btn__icon--close">
+          <use href="src/img/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+      <div class="btn__background" aria-label="btnMobileBackground">&nbsp;</div>
 
       <section class="hero">
         <figure class="hero__img">
@@ -55,7 +54,7 @@
             <h1 class="heading-primary">Hola! Soy Benjamin,</h1>
             <p class="hero__des">Maquetador Web.</p>
           </div>
-          <div class="social-net">
+          <div class="social-net social-net--main">
             <a
               class="social-net__link"
               aria-label="LinkedIn"
@@ -97,7 +96,7 @@
     </header>
 
     <main class="main">
-      <section class="about-me">
+      <section class="about-me" id="section--1">
         <div class="about-me__des">
           <h2 class="heading-secondary u-center-text">Sobre mí</h2>
           <div class="about-me__list">
@@ -137,30 +136,40 @@
         </div>
       </section>
 
-      <section class="projects">
-        <div class="projects__heading">
-          <h2 class="heading-secondary heading-secondary--white">Forkify</h2>
-          <p class="projects__des">App para buscar y subir recetas</p>
-        </div>
-        <div class="projects__tags">
-          <p class="projects__tag projects__tag--1">HTML5</p>
-          <p class="projects__tag projects__tag--2">Sass</p>
-          <p class="projects__tag projects__tag--3">JavaScript</p>
-        </div>
-
+      <!-- SECTION SLIDER -->
+      <section class="slider" id="section--2">
         <button class="btn btn--left" aria-label="Goleft button">
           <svg class="btn__icon btn__icon--white">
             <use href="src/img/sprite.svg#icon-chevron-left"></use>
           </svg>
         </button>
+
+        <div class="slider__slide slider__slide--1">
+          <figure class="slider__bg">
+            <img
+              src="src/img/portfolio__forkify.webp"
+              alt="Forkify"
+              class="slider__img"
+            />
+          </figure>
+          <h2 class="slider__title">Forkify</h2>
+          <p class="slider__text">App para buscar y subir recetas</p>
+          <p class="slider__tag slider__tag--1">HTML5</p>
+          <p class="slider__tag slider__tag--2">Sass</p>
+          <p class="slider__tag slider__tag--3">JavaScript</p>
+        </div>
+        <div class="slider__slide slider__slide--2"></div>
+        <div class="slider__slide slider__slide--3"></div>
+
         <button class="btn btn--right" aria-label="Goright button">
           <svg class="btn__icon btn__icon--white">
             <use href="src/img/sprite.svg#icon-chevron-right"></use>
           </svg>
         </button>
       </section>
+      <!--  -->
 
-      <section class="skills">
+      <section class="skills" id="section--3">
         <h2 class="heading-secondary u-center-text">Mis habilidades</h2>
         <div class="skills__list">
           <figure class="skills__item">
@@ -230,7 +239,7 @@
         </div>
       </section>
 
-      <section class="contact">
+      <section class="contact" id="section--4">
         <div class="contact__heading">
           <h2 class="heading-secondary heading-secondary--white">
             Envíame un mensaje

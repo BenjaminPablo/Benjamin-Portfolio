@@ -1,3 +1,5 @@
+@use '../abstracts/' as *;
+
 .footer {
   grid-column: full-start / full-end;
   background-color: var(--clr-primary-100);
@@ -7,4 +9,8 @@
   align-items: center;
   gap: var(--gap-400);
   flex-wrap: wrap;
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
 }

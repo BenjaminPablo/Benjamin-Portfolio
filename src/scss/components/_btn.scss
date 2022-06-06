@@ -9,20 +9,42 @@
   color: white;
   display: block;
 
-  &__mobile {
+  &--mobile {
     display: none;
 
     @include respond(phone) {
+      align-self: end;
+      margin-right: 3rem;
       display: flex;
       justify-content: center;
       align-items: center;
       background-color: white;
       height: 7rem;
       width: 7rem;
-      position: relative;
       border-radius: 50%;
       z-index: 4;
       box-shadow: 0 1rem 3rem rgba(black, 0.1);
+    }
+  }
+
+  &__background {
+    display: none;
+
+    @include respond(phone) {
+      display: inline-block;
+      background-color: var(--clr-primary-700);
+      height: 6rem;
+      width: 6rem;
+      border-radius: 50%;
+      z-index: 2;
+      position: absolute;
+      inset: 5.3rem 3.5rem auto auto;
+      transition: all 0.7s cubic-bezier(0.86, 0, 0.07, 1);
+
+      &--open {
+        display: block;
+        transform: scale(110);
+      }
     }
   }
 
@@ -99,12 +121,34 @@
   }
 
   &--left {
-    position: absolute;
-    inset: auto auto auto 8rem;
+    // position: absolute;
+    // inset: auto auto auto 8rem;
+    // transform: translate(-50%, -50%);
+
+    @include respond(tab-land) {
+      inset: auto auto auto 3rem;
+    }
+
+    @include respond(phone) {
+      display: none;
+    }
   }
 
   &--right {
-    position: absolute;
-    inset: auto 8rem auto auto;
+    // position: absolute;
+    // inset: auto 8rem auto auto;
+    // transform: translate(-50%, -50%);
+
+    @include respond(tab-land) {
+      inset: auto 3rem auto auto;
+    }
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &--active {
+    display: block;
   }
 }
