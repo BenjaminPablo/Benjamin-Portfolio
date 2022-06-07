@@ -7,25 +7,6 @@
     align-self: center;
   }
 
-  // @include respond(phone) {
-  //   display: flex;
-  //   align-self: end;
-  //   flex-flow: row-reverse;
-  //   position: relative;
-
-  //   padding: 3rem 3rem 0 0;
-  // }
-
-  // &--mobile {
-  //   display: block;
-  //   min-height: 100vh;
-  //   position: fixed;
-  //   inset: 50%;
-  //   transform: translate(-50%, -50%);
-  //   color: white;
-  //   z-index: 111;
-  // }
-
   &__list {
     list-style: none;
     display: flex;
@@ -75,32 +56,5 @@
       color: var(--clr-primary-600);
       transform: scale(1.1);
     }
-
-    // &--mobile {
-    //   &:link,
-    //   &:visited {
-    //     display: inline-block;
-    //     color: white;
-    //     font-size: 3rem;
-    //     text-transform: uppercase;
-    //     border-radius: 1rem;
-    //     padding: 1rem 2rem;
-    //     background-image: linear-gradient(
-    //       120deg,
-    //       transparent 0%,
-    //       transparent 50%,
-    //       white 50%
-    //     );
-    //     background-size: 240%;
-    //     transition: all 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
-    //   }
-
-    //   &:hover,
-    //   &:active {
-    //     background-position: 100%;
-    //     color: var(--clr-primary-700);
-    //     transform: translateX(1rem);
-    //   }
-    // }
   }
 }

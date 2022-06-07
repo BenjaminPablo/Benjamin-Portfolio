@@ -14,11 +14,11 @@
     <link rel="stylesheet" href="src/scss/main.scss" />
   </head>
   <body class="container">
-    <header class="header">
-      <nav class="nav">
+    <header class="header" id="section--0">
+      <nav class="nav nav--main">
         <ul class="nav__list nav__list--main">
           <li class="nav__item">
-            <a href="#" class="nav__link">Inicio</a>
+            <a href="#section--0" class="nav__link">Inicio</a>
           </li>
           <li class="nav__item">
             <a href="#section--1" class="nav__link">Sobre mí</a>
@@ -146,26 +146,78 @@
 
         <div class="slider__slide slider__slide--1">
           <figure class="slider__bg">
-            <img
-              src="src/img/portfolio__forkify.webp"
-              alt="Forkify"
-              class="slider__img"
-            />
+            <a
+              class="slider__link"
+              href="https://forkify-benpablo.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="src/img/portfolio__forkify.webp"
+                alt="Forkify"
+                class="slider__img"
+              />
+            </a>
           </figure>
-          <h2 class="slider__title">Forkify</h2>
-          <p class="slider__text">App para buscar y subir recetas</p>
-          <p class="slider__tag slider__tag--1">HTML5</p>
-          <p class="slider__tag slider__tag--2">Sass</p>
-          <p class="slider__tag slider__tag--3">JavaScript</p>
+          <p class="slider__title">Forkify</p>
+          <p class="slider__text">Buscador de recetas</p>
+          <div class="slider__tags">
+            <p class="slider__tag slider__tag--html5">HTML5</p>
+            <p class="slider__tag slider__tag--sass">Sass</p>
+            <p class="slider__tag slider__tag--js">JavaScript</p>
+          </div>
         </div>
-        <div class="slider__slide slider__slide--2"></div>
-        <div class="slider__slide slider__slide--3"></div>
+        <div class="slider__slide slider__slide--2">
+          <figure class="slider__bg">
+            <a
+              class="slider__link"
+              href="https://nexter-bpablo.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="src/img/portfolio__nexter.webp"
+                alt="Nexter"
+                class="slider__img"
+              />
+            </a>
+          </figure>
+          <p class="slider__title">Nexter</p>
+          <p class="slider__text">Venta de propiedades</p>
+          <div class="slider__tags">
+            <p class="slider__tag slider__tag--html5">HTML5</p>
+            <p class="slider__tag slider__tag--sass">Sass</p>
+          </div>
+        </div>
+        <div class="slider__slide slider__slide--3">
+          <figure class="slider__bg">
+            <a
+              class="slider__link"
+              href="https://omnifood-benjamin-pablo.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="src/img/portfolio__omnifood.webp"
+                alt="Omnifood"
+                class="slider__img"
+              />
+            </a>
+          </figure>
+          <p class="slider__title">Omnifood</p>
+          <p class="slider__text">Comidas nutritivas</p>
+          <div class="slider__tags">
+            <p class="slider__tag slider__tag--html5">HTML5</p>
+            <p class="slider__tag slider__tag--css3">CSS3</p>
+          </div>
+        </div>
 
         <button class="btn btn--right" aria-label="Goright button">
           <svg class="btn__icon btn__icon--white">
             <use href="src/img/sprite.svg#icon-chevron-right"></use>
           </svg>
         </button>
+        <div class="slider__dots"></div>
       </section>
       <!--  -->
 
@@ -254,23 +306,23 @@
     </main>
 
     <footer class="footer">
-      <nav class="nav u-align-self-center">
+      <nav class="nav nav--footer u-align-self-center">
         <ul class="nav__list nav__list--down">
           <li class="nav__item u-font-size-17">
             Hecho por
-            <a href="#" class="nav__link">Benjamin Pablo</a>
+            <a href="#section--0" class="nav__link">Benjamin Pablo</a>
           </li>
           <li class="nav__item u-font-size-17">
-            <a href="#" class="nav__link">Sobre mí</a>
+            <a href="#section--1" class="nav__link">Sobre mí</a>
           </li>
           <li class="nav__item u-font-size-17">
-            <a href="#" class="nav__link">Proyectos</a>
+            <a href="#section--2" class="nav__link">Proyectos</a>
           </li>
           <li class="nav__item u-font-size-17">
-            <a href="#" class="nav__link">Habilidades</a>
+            <a href="#section--3" class="nav__link">Habilidades</a>
           </li>
           <li class="nav__item u-font-size-17">
-            <a href="#" class="nav__link">Contacto</a>
+            <a href="#section--4" class="nav__link">Contacto</a>
           </li>
         </ul>
       </nav>

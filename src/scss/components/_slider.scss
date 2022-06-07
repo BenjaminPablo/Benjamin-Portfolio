@@ -8,24 +8,35 @@
 
   &__slide {
     position: absolute;
+    top: 0;
     width: 100%;
     height: 100%;
     transition: transform 1s;
     display: grid;
-    grid-template-columns: 1fr repeat(3, min-content) 1fr;
-    grid-template-rows: 1fr repeat(2, min-content) 1fr min-content 1fr;
+    grid-template-columns: 1fr repeat(3, max-content) 1fr;
+    grid-template-rows: 2fr repeat(2, min-content) 1fr min-content 2fr;
+    justify-items: center;
+    row-gap: var(--gap-200);
+    text-align: center;
+
+    &--1 {
+    }
+
+    &--2 {
+      transform: translateX(100%);
+    }
+
+    &--3 {
+      transform: translateX(200%);
+    }
   }
 
   &__bg {
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
-    background-image: linear-gradient(
-      hsl(27, 37%, 10%, 0.57),
-      hsl(27, 37%, 10%, 0.57)
-    );
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    background-color: hsl(27, 37%, 10%, 0.7);
   }
 
   &__img {
@@ -35,40 +46,29 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
   }
 
   &__title {
     @extend .heading-secondary;
-    grid-column: 3 / 4;
+    grid-column: 2 / 5;
     grid-row: 2;
+    color: white;
   }
 
   &__text {
     display: flex;
     flex-direction: column;
     gap: var(--gap-400);
-    grid-column: 3 / 4;
+    grid-column: 2 / 5;
     grid-row: 3;
+    color: white;
+  }
 
-    &--phone {
-      display: none;
-    }
-
-    @include respond(phone) {
-      display: none;
-
-      &--phone {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 7rem 3rem;
-        background-color: var(--clr-primary-700);
-        grid-column: full-start / full-end;
-      }
-    }
+  &__tags {
+    display: flex;
+    grid-row: 5;
+    grid-column: 2 / 5;
+    gap: var(--gap-400);
   }
 
   &__tag {
@@ -78,21 +78,31 @@
     font-size: var(--fs-200);
     font-weight: var(--fw-600);
     padding: 0.4rem 1.4rem;
-    grid-row: 5;
 
-    &--1 {
+    &--html5 {
       background-color: #f76707;
-      grid-column: 2 / 3;
     }
 
-    &--2 {
+    &--sass {
       background-color: #f783ac;
-      grid-column: 3 / 4;
     }
 
-    &--3 {
+    &--js {
       background-color: #ffd43b;
-      grid-column: 4 / 5;
     }
+
+    &--css3 {
+      background-color: #4dabf7;
+    }
+  }
+
+  &__dots {
+    position: absolute;
+    inset: auto auto 5% 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: var(--gap-100);
+    align-items: center;
+    justify-content: center;
   }
 }

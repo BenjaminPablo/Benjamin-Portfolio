@@ -15,10 +15,6 @@
     grid-template-rows: min-content 90vw min-content 90vw;
   }
 
-  @include respond(phone) {
-    grid-template-rows: min-content min-content 90vw min-content 90vw;
-  }
-
   .about-me {
     grid-column: col-start 2 / col-end 7;
 

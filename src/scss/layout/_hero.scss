@@ -1,4 +1,5 @@
 @use '../abstracts/' as *;
+@use '../base/' as *;
 
 .hero {
   color: #fff;
@@ -8,6 +9,7 @@
   background-color: var(--clr-primary-700);
   border-radius: 2rem;
   padding: 6.4rem 8rem;
+  grid-row: 3;
 
   @include respond(tab-land) {
     padding: 5rem;
@@ -26,6 +28,7 @@
   }
 
   &__img {
+    animation: moveInLeft 1s ease-out;
     img {
       border-radius: 2rem;
       display: block;
@@ -38,6 +41,8 @@
   }
 
   &__info {
+    animation: moveInRight 1s ease-out;
+
     display: grid;
     gap: 6.4rem;
 

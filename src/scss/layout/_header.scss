@@ -2,13 +2,14 @@
 
 .header {
   grid-column: full-start / full-end;
-  background-color: var(--clr-primary-100);
+  background-color: hsl(27, 37%, 10%, 0.1);
   display: grid;
-  place-items: center;
-  padding: 4.8rem;
+  place-content: center;
+  grid-template-rows: min-content 1fr min-content 1fr min-content;
+  padding: 3rem 4.8rem 4.8rem;
   min-height: 100vh;
-  margin-bottom: var(--gap-900);
   position: relative;
+  margin-bottom: var(--gap-900);
 
   @include respond(tab-port) {
     min-height: auto;

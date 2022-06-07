@@ -9,6 +9,42 @@
   color: white;
   display: block;
 
+  &--left {
+    position: absolute;
+    inset: 50% auto auto 7rem;
+    z-index: 1;
+    transform: translateY(-50%);
+    opacity: 0.5;
+
+    @include respond(tab-land) {
+      inset: 50% auto auto 3rem;
+    }
+  }
+
+  &--right {
+    position: absolute;
+    inset: 50% 7rem auto auto;
+    transform: translateY(-50%);
+    opacity: 0.5;
+
+    @include respond(tab-land) {
+      inset: 50% 3rem auto auto;
+    }
+  }
+
+  &__dot {
+    background-color: white;
+    opacity: 0.5;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    transition: all 0.5s;
+
+    &--active {
+      opacity: 1;
+    }
+  }
+
   &--mobile {
     display: none;
 
@@ -49,6 +85,9 @@
   }
 
   &--down {
+    grid-row: 5;
+    animation: moveInBottom 1s ease-out;
+
     @include respond(tab-port) {
       display: none;
     }
@@ -75,29 +114,7 @@
 
     &:hover {
       fill: var(--clr-primary-400);
-    }
-
-    &--mobile {
-      &,
-      &::before,
-      &::after {
-        width: 3rem;
-        height: 0.2rem;
-        background-color: var(--clr-primary-700);
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-      }
-
-      &::before,
-      &::after {
-        content: '';
-        display: block;
-      }
-    }
-
-    &--close {
-      display: none;
+      opacity: 1;
     }
   }
 
@@ -117,34 +134,6 @@
 
     &:active {
       transform: scale(1.1);
-    }
-  }
-
-  &--left {
-    // position: absolute;
-    // inset: auto auto auto 8rem;
-    // transform: translate(-50%, -50%);
-
-    @include respond(tab-land) {
-      inset: auto auto auto 3rem;
-    }
-
-    @include respond(phone) {
-      display: none;
-    }
-  }
-
-  &--right {
-    // position: absolute;
-    // inset: auto 8rem auto auto;
-    // transform: translate(-50%, -50%);
-
-    @include respond(tab-land) {
-      inset: auto 3rem auto auto;
-    }
-
-    @include respond(phone) {
-      display: none;
     }
   }
 
