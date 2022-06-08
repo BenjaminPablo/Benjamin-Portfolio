@@ -15,8 +15,8 @@
   </head>
   <body class="container">
     <header class="header" id="section--0">
-      <nav class="nav nav--main">
-        <ul class="nav__list nav__list--main">
+      <nav class="nav">
+        <ul class="nav__list">
           <li class="nav__item">
             <a href="#section--0" class="nav__link">Inicio</a>
           </li>
@@ -35,6 +35,7 @@
         </ul>
       </nav>
 
+      <!-- MOBILE NAVIGATION -->
       <button class="btn btn--mobile" aria-label="btnMobile">
         <svg class="btn__icon btn__icon--open">
           <use href="src/img/sprite.svg#icon-menu"></use>
@@ -44,7 +45,9 @@
         </svg>
       </button>
       <div class="btn__background" aria-label="btnMobileBackground">&nbsp;</div>
+      <!---->
 
+      <!-- SECTION HERO -->
       <section class="hero">
         <figure class="hero__img">
           <img src="src/img/logo.svg" alt="Logo" />
@@ -87,7 +90,7 @@
           </div>
         </div>
       </section>
-
+      <!---->
       <button class="btn btn--down" aria-label="GoDown Button">
         <svg class="btn__icon btn__icon--primary">
           <use href="src/img/sprite.svg#icon-chevron-down"></use>
@@ -96,7 +99,8 @@
     </header>
 
     <main class="main">
-      <section class="about-me" id="section--1">
+      <!-- SECTION ABOUT ME -->
+      <section class="section about-me" id="section--1">
         <div class="about-me__des">
           <h2 class="heading-secondary u-center-text">Sobre mí</h2>
           <div class="about-me__list">
@@ -135,9 +139,10 @@
           </div>
         </div>
       </section>
+      <!---->
 
       <!-- SECTION SLIDER -->
-      <section class="slider" id="section--2">
+      <section class="section slider" id="section--2">
         <button class="btn btn--left" aria-label="Goleft button">
           <svg class="btn__icon btn__icon--white">
             <use href="src/img/sprite.svg#icon-chevron-left"></use>
@@ -219,9 +224,10 @@
         </button>
         <div class="slider__dots"></div>
       </section>
-      <!--  -->
+      <!---->
 
-      <section class="skills" id="section--3">
+      <!-- SECTION SKILLS -->
+      <section class="section skills" id="section--3">
         <h2 class="heading-secondary u-center-text">Mis habilidades</h2>
         <div class="skills__list">
           <figure class="skills__item">
@@ -290,8 +296,10 @@
           </figure>
         </div>
       </section>
+      <!---->
 
-      <section class="contact" id="section--4">
+      <!-- SECTION CONTACT -->
+      <section class="section contact" id="section--4">
         <div class="contact__heading">
           <h2 class="heading-secondary heading-secondary--white">
             Envíame un mensaje
@@ -301,31 +309,17 @@
             aportar valor con mis habilidades aprendidas.
           </p>
         </div>
-        <button class="btn btn--primary">Contactame</button>
+        <button class="btn btn--primary">
+          <a href="mailto:benjaminpablo2345@gmail.com" class="contact__link"
+            >Contáctame</a
+          >
+        </button>
       </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
-      <nav class="nav nav--footer u-align-self-center">
-        <ul class="nav__list nav__list--down">
-          <li class="nav__item u-font-size-17">
-            Hecho por
-            <a href="#section--0" class="nav__link">Benjamin Pablo</a>
-          </li>
-          <li class="nav__item u-font-size-17">
-            <a href="#section--1" class="nav__link">Sobre mí</a>
-          </li>
-          <li class="nav__item u-font-size-17">
-            <a href="#section--2" class="nav__link">Proyectos</a>
-          </li>
-          <li class="nav__item u-font-size-17">
-            <a href="#section--3" class="nav__link">Habilidades</a>
-          </li>
-          <li class="nav__item u-font-size-17">
-            <a href="#section--4" class="nav__link">Contacto</a>
-          </li>
-        </ul>
-      </nav>
+      <p class="footer__copy">Hecho por Benjamin Pablo</p>
       <div class="social-net">
         <a
           class="social-net__link"
@@ -358,6 +352,7 @@
         </a>
       </div>
     </footer>
+    <!---->
 
     <script src="src/js/script.js"></script>
   </body>

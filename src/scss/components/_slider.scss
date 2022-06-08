@@ -19,9 +19,6 @@
     row-gap: var(--gap-200);
     text-align: center;
 
-    &--1 {
-    }
-
     &--2 {
       transform: translateX(100%);
     }
@@ -69,6 +66,10 @@
     grid-row: 5;
     grid-column: 2 / 5;
     gap: var(--gap-400);
+
+    @include respond(phone) {
+      gap: var(--gap-100);
+    }
   }
 
   &__tag {

@@ -5,12 +5,16 @@
   background-color: hsl(27, 37%, 10%, 0.1);
   display: flex;
   justify-content: space-evenly;
-  padding: 3rem;
+  padding: 2.7rem 3rem;
   align-items: center;
   gap: var(--gap-400);
   flex-wrap: wrap;
 
   @include respond(phone) {
     flex-direction: column;
+  }
+
+  &__copy {
+    font-size: 1.7rem;
   }
 }

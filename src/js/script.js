@@ -1,12 +1,8 @@
 'use strict';
 
-const navListEl = document.querySelector('.nav__list');
 const navEl = document.querySelector('.nav');
-const navLinkEl = document.querySelectorAll('.nav__link');
-const section1El = document.querySelector('.about-me');
-
 // Page Navigation
-navListEl.addEventListener('click', function (e) {
+navEl.addEventListener('click', function (e) {
   // Matching the strategy
   e.preventDefault();
   if (e.target.classList.contains('nav__link')) {
@@ -17,22 +13,20 @@ navListEl.addEventListener('click', function (e) {
   }
 });
 
+//////////////////////////////////////////////
 // Menu Fade Animation
+const navLinksEl = document.querySelectorAll('.nav__link');
 const handleHover = function (e) {
-  console.log(e.target.classList.contains('nav__link'));
   if (e.target.classList.contains('nav__link')) {
     const link = e.target;
-    const children = navListEl.querySelectorAll('.nav__link');
-
-    children.forEach(el => {
-      if (el !== link) el.style.opacity = this;
+    navLinksEl.forEach(navLink => {
+      if (navLink !== link) navLink.style.opacity = this;
     });
   }
 };
-
 // Passing an "argument" into handler
-navListEl.addEventListener('mouseover', handleHover.bind(0.5));
-navListEl.addEventListener('mouseout', handleHover.bind(1));
+navEl.addEventListener('mouseover', handleHover.bind(0.5));
+navEl.addEventListener('mouseout', handleHover.bind(1));
 
 //////////////////////////////////////////////
 // Sticky navigation: Intersection Observer API
@@ -44,12 +38,12 @@ const stickyNav = function (entries) {
 
   if (!entry.isIntersecting) {
     navEl.classList.add('nav--sticky');
-    navLinkEl.forEach(el => {
+    navLinksEl.forEach(el => {
       el.classList.add('nav__link--sticky');
     });
   } else {
     navEl.classList.remove('nav--sticky');
-    navLinkEl.forEach(el => {
+    navLinksEl.forEach(el => {
       el.classList.remove('nav__link--sticky');
     });
   }
@@ -61,6 +55,28 @@ const headerObserver = new IntersectionObserver(stickyNav, {
   rootMargin: `-${navHeightEl}px`,
 });
 headerObserver.observe(headerEl);
+
+//////////////////////////////////////////////
+// Reveal Sections on scroll
+const allSections = document.querySelectorAll('.section');
+
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove('section--hidden');
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+});
+
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+  section.classList.add('section--hidden');
+});
 
 ////////////////////////////////////
 // Slider

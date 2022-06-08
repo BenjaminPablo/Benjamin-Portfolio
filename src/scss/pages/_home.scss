@@ -5,7 +5,6 @@
   grid-template-columns: $grid-columns;
   grid-template-rows: min-content 44vw min-content 44vw;
   grid-column: full-start / full-end;
-  row-gap: var(--gap-900);
 
   @include respond(tab-land) {
     grid-template-rows: min-content 70vw min-content 70vw;
@@ -17,8 +16,16 @@
 
   .about-me {
     grid-column: col-start 2 / col-end 7;
+    padding: 10rem 3rem;
+
+    &--hidden {
+    }
 
     @include respond(tab-port) {
+      grid-column: center-start / center-end;
+    }
+
+    @include respond(phone) {
       grid-column: full-start / full-end;
     }
 
@@ -32,10 +39,6 @@
       row-gap: var(--gap-400);
       font-size: var(--fs-300);
       color: var(--clr-neutral-300);
-
-      @include respond(tab-port) {
-        padding: 0 3rem;
-      }
     }
 
     &__text {
@@ -63,17 +66,17 @@
   }
 
   .skills {
-    grid-column: center-start / center-end;
+    grid-column: full-start / full-end;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: var(--gap-900);
+    padding: 10rem 3rem;
 
     &__list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
       place-items: center;
-      column-gap: var(--gap-300);
       row-gap: var(--gap-800);
     }
 
@@ -121,7 +124,7 @@
     color: white;
     text-align: center;
     gap: var(--gap-700);
-    padding: 7rem 3rem;
+    padding: 0 3rem;
 
     &__heading {
       display: flex;
@@ -135,6 +138,12 @@
       @include respond(phone) {
         display: none;
       }
+    }
+
+    &__link {
+      text-decoration: none;
+      color: inherit;
+      font-family: inherit;
     }
   }
 }

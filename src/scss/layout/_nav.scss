@@ -1,10 +1,24 @@
 @use '../abstracts/' as *;
 
 .nav {
-  align-self: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7rem;
+  animation: moveInTop 1s ease-out;
 
-  @include respond(tab-port) {
-    align-self: center;
+  @include respond(phone) {
+    display: none;
+  }
+
+  &--sticky {
+    position: fixed;
+    transition: all 0.2s ease-out;
+    width: 100%;
+    inset: 0 auto auto 0;
+    background-color: var(--clr-primary-700);
+    color: white;
+    z-index: 100;
   }
 
   &__list {
@@ -18,20 +32,6 @@
       text-align: center;
     }
 
-    // &--mobile {
-    //   display: grid;
-    //   place-content: center;
-    //   min-height: 100vh;
-    //   text-align: center;
-    //   gap: 4rem;
-    // }
-
-    &--main {
-      @include respond(phone) {
-        display: none;
-      }
-    }
-
     @include respond(phone) {
       flex-direction: column;
     }
@@ -42,7 +42,8 @@
   }
 
   &__link {
-    display: inline-block;
+    display: block;
+
     &:link,
     &:visited {
       text-decoration: none;
@@ -55,6 +56,12 @@
     &:active {
       color: var(--clr-primary-600);
       transform: scale(1.1);
+    }
+
+    &--sticky {
+      &:hover {
+        color: white;
+      }
     }
   }
 }

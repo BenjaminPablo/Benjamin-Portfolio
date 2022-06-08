@@ -9,6 +9,12 @@
   color: white;
   display: block;
 
+  &--down {
+    animation: moveInBottom 1s ease-out;
+    display: flex;
+    justify-content: center;
+  }
+
   &--left {
     position: absolute;
     inset: 50% auto auto 7rem;
@@ -49,17 +55,16 @@
     display: none;
 
     @include respond(phone) {
-      align-self: end;
-      margin-right: 3rem;
       display: flex;
       justify-content: center;
       align-items: center;
+      align-self: end;
       background-color: white;
       height: 7rem;
       width: 7rem;
       border-radius: 50%;
       z-index: 4;
-      box-shadow: 0 1rem 3rem rgba(black, 0.1);
+      box-shadow: 0 1rem 3rem hsl(27, 37%, 10%, 0.2);
     }
   }
 
@@ -67,29 +72,19 @@
     display: none;
 
     @include respond(phone) {
-      display: inline-block;
+      display: block;
       background-color: var(--clr-primary-700);
       height: 6rem;
       width: 6rem;
       border-radius: 50%;
-      z-index: 2;
       position: absolute;
-      inset: 5.3rem 3.5rem auto auto;
-      transition: all 0.7s cubic-bezier(0.86, 0, 0.07, 1);
+      inset: 3.5rem 3.5rem auto auto;
+      // transition: all 0.7s cubic-bezier(0.86, 0, 0.07, 1);
 
-      &--open {
-        display: block;
-        transform: scale(110);
-      }
-    }
-  }
-
-  &--down {
-    grid-row: 5;
-    animation: moveInBottom 1s ease-out;
-
-    @include respond(tab-port) {
-      display: none;
+      // &--open {
+      //   display: block;
+      //   transform: scale(110);
+      // }
     }
   }
 
@@ -98,6 +93,10 @@
     height: 4rem;
     fill: var(--clr-primary-700);
     transition: all 0.1s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+
+    &--close {
+      display: none;
+    }
 
     &--primary {
       &:hover {

@@ -1,0 +1,11 @@
+@use '../abstracts/' as *;
+@use '../base/' as *;
+
+.section {
+  transition: all 1s;
+
+  &--hidden {
+    opacity: 0;
+    transform: translateY(8rem);
+  }
+}
