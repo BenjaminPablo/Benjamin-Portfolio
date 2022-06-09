@@ -117,7 +117,7 @@
     }
   }
 
-  &--primary {
+  &--contact {
     font-size: var(--fs-300);
     font-weight: var(--fw-500);
     padding: 0.8rem 1.6rem;
@@ -125,6 +125,8 @@
     background-color: var(--clr-primary-700);
     transform: scale(1);
     transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+    grid-column: 1;
+    grid-row: 3;
 
     &:hover {
       transform: scale(1.1);
