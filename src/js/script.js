@@ -1,7 +1,15 @@
 'use strict';
 
-const navEl = document.querySelector('.nav');
+// Button scrolling
+const btnScrollTo = document.querySelector('.btn--down');
+const section1 = document.querySelector('.about-me');
+btnScrollTo.addEventListener('click', () => {
+  section1.scrollIntoView({ behavior: 'smooth' });
+});
+
+//////////////////////////////////
 // Page Navigation
+const navEl = document.querySelector('.nav');
 navEl.addEventListener('click', function (e) {
   // Matching the strategy
   e.preventDefault();
@@ -76,37 +84,6 @@ const sectionObserver = new IntersectionObserver(revealSection, {
 allSections.forEach(function (section) {
   sectionObserver.observe(section);
   section.classList.add('section--hidden');
-});
-
-////////////////////////////////////////
-// Lazy loading images
-const imgTargets = document.querySelectorAll('img[data-src]');
-console.log(imgTargets);
-
-const loadImg = function (entries, observer) {
-  const [entry] = entries;
-
-  if (!entry.isIntersecting) return;
-
-  // Replace src with data-src
-
-  entry.target.src = entry.target.dataset.src;
-
-  entry.target.addEventListener('load', function () {
-    entry.target.classList.remove('u-lazy-img');
-  });
-
-  observer.unobserve(entry.target);
-};
-
-const imgObserver = new IntersectionObserver(loadImg, {
-  root: null,
-  threshold: 0,
-  rootMargin: '200px',
-});
-
-imgTargets.forEach(img => {
-  imgObserver.observe(img);
 });
 
 ////////////////////////////////////

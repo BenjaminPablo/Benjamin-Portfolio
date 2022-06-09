@@ -105,7 +105,6 @@
   }
 
   .contact {
-    background-color: hsl(27, 37%, 10%, 0.7);
     grid-column: full-start / full-end;
     display: grid;
     place-items: center;
@@ -119,14 +118,15 @@
       height: 100%;
       grid-column: 1 / -1;
       grid-row: 1 / -1;
-      position: relative;
-      z-index: -1;
+      background-color: hsl(27, 37%, 10%, 0.7);
     }
 
     &__img {
       display: block;
       width: 100%;
       height: 100%;
+      position: relative;
+      z-index: -1;
       object-fit: cover;
       grid-column: 1 / -1;
       grid-row: 1 / -1;
