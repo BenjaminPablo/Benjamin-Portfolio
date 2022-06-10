@@ -1,14 +1,62 @@
 @use '../abstracts/' as *;
 
 .nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 7rem;
-  animation: moveInTop 1s ease-out;
-
   @include respond(phone) {
+    // display: none;
+  }
+
+  &--main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7rem;
+    animation: moveInTop 1s ease-out;
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &--mobile {
     display: none;
+
+    @include respond(phone) {
+      display: block;
+      min-height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1500;
+      opacity: 0;
+      width: 0;
+    }
+  }
+
+  &--active {
+    opacity: 1;
+    width: 100%;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  &__background {
+    display: none;
+
+    @include respond(phone) {
+      display: block;
+      height: 6rem;
+      width: 6rem;
+      border-radius: 50%;
+      position: fixed;
+      top: 4.5rem;
+      right: 4.5rem;
+      background-color: var(--clr-primary-700);
+      z-index: 1000;
+      transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+
+      &--active {
+        transform: scale(80);
+      }
+    }
   }
 
   &--sticky {
@@ -23,44 +71,81 @@
 
   &__list {
     list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 8rem;
 
-    &--down {
-      gap: var(--gap-400);
-      text-align: center;
+    &--main {
+      display: flex;
+      justify-content: center;
+      gap: 8rem;
     }
 
-    @include respond(phone) {
+    &--mobile {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 100%;
+      color: white;
+      display: flex;
       flex-direction: column;
+      gap: var(--gap-300);
     }
   }
 
   &__item {
-    font-size: 1.6rem;
   }
 
   &__link {
-    display: block;
-
     &:link,
     &:visited {
       text-decoration: none;
       color: inherit;
-      transform: scale(1);
-      transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+      font-size: 1.7rem;
     }
 
-    &:hover,
-    &:active {
-      color: var(--clr-primary-600);
-      transform: scale(1.1);
+    &--main {
+      &:link,
+      &:visited {
+        transform: scale(1);
+        transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+
+      &:hover,
+      &:active {
+        color: var(--clr-primary-600);
+        transform: scale(1.1);
+      }
     }
 
     &--sticky {
       &:hover {
         color: white;
+      }
+    }
+
+    &--mobile {
+      &:link,
+      &:visited {
+        display: inline-block;
+        padding: 1rem 2rem;
+        font-size: 3rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        background-image: linear-gradient(
+          120deg,
+          transparent 0%,
+          transparent 50%,
+          white 50%
+        );
+        background-size: 250%;
+        transition: all 0.4s ease-in-out;
+      }
+
+      &:hover,
+      &:active {
+        background-position: 100%;
+        color: var(--clr-primary-700);
+        transform: translateX(1rem);
       }
     }
   }

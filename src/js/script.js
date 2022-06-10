@@ -1,16 +1,30 @@
 'use strict';
-
-// Button scrolling
 const btnScrollTo = document.querySelector('.btn--down');
+const btnMobile = document.querySelector('.btn--mobile');
 const section1 = document.querySelector('.about-me');
+const navMainEl = document.querySelector('.nav--main');
+const navEl = document.querySelector('.nav');
+const allSections = document.querySelectorAll('.section');
+const navLinksEl = document.querySelectorAll('.nav__link');
+const headerEl = document.querySelector('.header');
+const navBackground = document.querySelector('.nav__background');
+
+////////////////////////////////////////////////////
+// Mobile functionality
+btnMobile.addEventListener('click', () => {
+  navBackground.classList.toggle('nav__background--active');
+  navEl.classList.toggle('nav--active');
+});
+
+//////////////////////////////////////////////
+// Button scrolling
 btnScrollTo.addEventListener('click', () => {
   section1.scrollIntoView({ behavior: 'smooth' });
 });
 
 //////////////////////////////////
 // Page Navigation
-const navEl = document.querySelector('.nav');
-navEl.addEventListener('click', function (e) {
+navMainEl.addEventListener('click', function (e) {
   // Matching the strategy
   e.preventDefault();
   if (e.target.classList.contains('nav__link')) {
@@ -23,7 +37,6 @@ navEl.addEventListener('click', function (e) {
 
 //////////////////////////////////////////////
 // Menu Fade Animation
-const navLinksEl = document.querySelectorAll('.nav__link');
 const handleHover = function (e) {
   if (e.target.classList.contains('nav__link')) {
     const link = e.target;
@@ -33,27 +46,29 @@ const handleHover = function (e) {
   }
 };
 // Passing an "argument" into handler
-navEl.addEventListener('mouseover', handleHover.bind(0.5));
-navEl.addEventListener('mouseout', handleHover.bind(1));
+navMainEl.addEventListener('mouseover', handleHover.bind(0.5));
+navMainEl.addEventListener('mouseout', handleHover.bind(1));
 
 //////////////////////////////////////////////
 // Sticky navigation: Intersection Observer API
-const headerEl = document.querySelector('.header');
-const navHeightEl = navEl.getBoundingClientRect().height;
-
+const navHeightEl = navMainEl.getBoundingClientRect().height;
 const stickyNav = function (entries) {
   const [entry] = entries;
 
   if (!entry.isIntersecting) {
-    navEl.classList.add('nav--sticky');
+    navMainEl.classList.add('nav--sticky');
     navLinksEl.forEach(el => {
       el.classList.add('nav__link--sticky');
     });
+    btnMobile.classList.add('u-sticky');
+    btnBackground.classList.add('u-sticky');
   } else {
-    navEl.classList.remove('nav--sticky');
+    navMainEl.classList.remove('nav--sticky');
     navLinksEl.forEach(el => {
       el.classList.remove('nav__link--sticky');
     });
+    btnMobile.classList.remove('u-sticky');
+    btnBackground.classList.remove('u-sticky');
   }
 };
 
@@ -66,7 +81,6 @@ headerObserver.observe(headerEl);
 
 //////////////////////////////////////////////
 // Reveal Sections on scroll
-const allSections = document.querySelectorAll('.section');
 
 const revealSection = function (entries, observer) {
   const [entry] = entries;

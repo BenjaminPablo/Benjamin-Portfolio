@@ -14,38 +14,58 @@
     <link rel="stylesheet" href="src/scss/main.scss" />
   </head>
   <body class="container">
+    <button class="btn btn--mobile">
+      <span class="btn__icon--mobile"></span>
+    </button>
+    <div class="nav__background">&nbsp;</div>
+    <nav class="nav nav--mobile">
+      <ul class="nav__list nav__list--mobile">
+        <li class="nav__item">
+          <a href="#section--0" class="nav__link nav__link--mobile">Inicio</a>
+        </li>
+        <li class="nav__item">
+          <a href="#section--1" class="nav__link nav__link--mobile">Sobre mí</a>
+        </li>
+        <li class="nav__item">
+          <a href="#section--2" class="nav__link nav__link--mobile"
+            >Proyectos</a
+          >
+        </li>
+        <li class="nav__item">
+          <a href="#section--3" class="nav__link nav__link--mobile"
+            >Habilidades</a
+          >
+        </li>
+        <li class="nav__item">
+          <a href="#section--4" class="nav__link nav__link--mobile">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+
     <header class="header" id="section--0">
-      <nav class="nav">
-        <ul class="nav__list">
+      <nav class="nav nav--main">
+        <ul class="nav__list nav__list--main">
           <li class="nav__item">
-            <a href="#section--0" class="nav__link">Inicio</a>
+            <a href="#section--0" class="nav__link nav__link--main">Inicio</a>
           </li>
           <li class="nav__item">
-            <a href="#section--1" class="nav__link">Sobre mí</a>
+            <a href="#section--1" class="nav__link nav__link--main">Sobre mí</a>
           </li>
           <li class="nav__item">
-            <a href="#section--2" class="nav__link">Proyectos</a>
+            <a href="#section--2" class="nav__link nav__link--main"
+              >Proyectos</a
+            >
           </li>
           <li class="nav__item">
-            <a href="#section--3" class="nav__link">Habilidades</a>
+            <a href="#section--3" class="nav__link nav__link--main"
+              >Habilidades</a
+            >
           </li>
           <li class="nav__item">
-            <a href="#section--4" class="nav__link">Contacto</a>
+            <a href="#section--4" class="nav__link nav__link--main">Contacto</a>
           </li>
         </ul>
       </nav>
-
-      <!-- MOBILE NAVIGATION -->
-      <button class="btn btn--mobile" aria-label="btnMobile">
-        <svg class="btn__icon btn__icon--open">
-          <use href="src/img/sprite.svg#icon-menu"></use>
-        </svg>
-        <svg class="btn__icon btn__icon--close">
-          <use href="src/img/sprite.svg#icon-close"></use>
-        </svg>
-      </button>
-      <div class="btn__background" aria-label="btnMobileBackground">&nbsp;</div>
-      <!---->
 
       <!-- SECTION HERO -->
       <section class="hero">
@@ -92,7 +112,7 @@
       </section>
       <!---->
       <button class="btn btn--down" aria-label="GoDown Button">
-        <svg class="btn__icon btn__icon--primary">
+        <svg class="btn__icon">
           <use href="src/img/sprite.svg#icon-chevron-down"></use>
         </svg>
       </button>

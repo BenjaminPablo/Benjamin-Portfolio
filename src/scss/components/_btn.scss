@@ -5,22 +5,92 @@
   background-color: transparent;
   cursor: pointer;
   font-family: inherit;
-  transform: scale(1);
   color: white;
   display: block;
+
+  &--mobile {
+    display: none;
+
+    @include respond(phone) {
+      display: block;
+      background-color: white;
+      height: 7rem;
+      width: 7rem;
+      position: fixed;
+      top: 4rem;
+      right: 4rem;
+      border-radius: 50%;
+      z-index: 2000;
+      box-shadow: 0 1rem 3rem hsl(27, 37%, 10%, 0.3);
+      text-align: center;
+    }
+  }
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+    fill: var(--clr-primary-700);
+
+    &--white {
+      fill: white;
+      transform: scale(1);
+      opacity: 0.5;
+      transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+      &:hover {
+        transform: scale(1.4);
+        opacity: 1;
+      }
+    }
+
+    &--mobile {
+      position: relative;
+      margin-top: 3.5rem;
+
+      &,
+      &::before,
+      &::after {
+        width: 3rem;
+        height: 0.2rem;
+        background-color: var(--clr-primary-700);
+        display: inline-block;
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        transition: all 0.2s;
+      }
+
+      &::before {
+        top: -0.8rem;
+      }
+
+      &::after {
+        top: 0.8rem;
+      }
+    }
+  }
 
   &--down {
     animation: moveInBottom 1s ease-out;
     display: flex;
     justify-content: center;
+    transform: scale(1);
+    transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover {
+      transform: scale(1.4);
+    }
   }
 
   &--left {
     position: absolute;
     inset: 50% auto auto 7rem;
-    z-index: 1;
     transform: translateY(-50%);
-    opacity: 0.5;
+    z-index: 1;
 
     @include respond(tab-land) {
       inset: 50% auto auto 3rem;
@@ -31,7 +101,6 @@
     position: absolute;
     inset: 50% 7rem auto auto;
     transform: translateY(-50%);
-    opacity: 0.5;
 
     @include respond(tab-land) {
       inset: 50% 3rem auto auto;
@@ -47,72 +116,6 @@
     transition: all 0.5s;
 
     &--active {
-      opacity: 1;
-    }
-  }
-
-  &--mobile {
-    display: none;
-
-    @include respond(phone) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      align-self: end;
-      background-color: white;
-      height: 7rem;
-      width: 7rem;
-      border-radius: 50%;
-      z-index: 4;
-      box-shadow: 0 1rem 3rem hsl(27, 37%, 10%, 0.2);
-    }
-  }
-
-  &__background {
-    display: none;
-
-    @include respond(phone) {
-      display: block;
-      background-color: var(--clr-primary-700);
-      height: 6rem;
-      width: 6rem;
-      border-radius: 50%;
-      position: absolute;
-      inset: 3.5rem 3.5rem auto auto;
-      // transition: all 0.7s cubic-bezier(0.86, 0, 0.07, 1);
-
-      // &--open {
-      //   display: block;
-      //   transform: scale(110);
-      // }
-    }
-  }
-
-  &__icon {
-    width: 4rem;
-    height: 4rem;
-    fill: var(--clr-primary-700);
-    transition: all 0.1s cubic-bezier(0.6, 0.04, 0.98, 0.335);
-
-    &--close {
-      display: none;
-    }
-
-    &--primary {
-      &:hover {
-        transform: scale(1.5);
-      }
-    }
-
-    &--white {
-      fill: white;
-      &:hover {
-        transform: scale(1);
-      }
-    }
-
-    &:hover {
-      fill: var(--clr-primary-400);
       opacity: 1;
     }
   }
@@ -136,9 +139,5 @@
     &:active {
       transform: scale(1.1);
     }
-  }
-
-  &--active {
-    display: block;
   }
 }
