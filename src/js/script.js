@@ -3,17 +3,22 @@ const btnScrollTo = document.querySelector('.btn--down');
 const btnMobile = document.querySelector('.btn--mobile');
 const section1 = document.querySelector('.about-me');
 const navMainEl = document.querySelector('.nav--main');
+const navMobileEl = document.querySelector('.nav--mobile');
 const navEl = document.querySelector('.nav');
 const allSections = document.querySelectorAll('.section');
 const navLinksEl = document.querySelectorAll('.nav__link');
 const headerEl = document.querySelector('.header');
 const navBackground = document.querySelector('.nav__background');
+const btnIconMenuEl = document.querySelector('.btn__icon--menu');
+const btnIconCloseEl = document.querySelector('.btn__icon--close');
 
 ////////////////////////////////////////////////////
 // Mobile functionality
 btnMobile.addEventListener('click', () => {
   navBackground.classList.toggle('nav__background--active');
   navEl.classList.toggle('nav--active');
+  btnIconMenuEl.classList.toggle('btn__icon--hidden');
+  btnIconCloseEl.classList.toggle('btn__icon--hidden');
 });
 
 //////////////////////////////////////////////
@@ -32,6 +37,21 @@ navMainEl.addEventListener('click', function (e) {
     document.querySelector(id).scrollIntoView({
       behavior: 'smooth',
     });
+    navBackground.classList.remove('nav__background--active');
+  }
+});
+
+navMobileEl.addEventListener('click', function (e) {
+  e.preventDefault();
+  if (e.target.classList.contains('nav__link--mobile')) {
+    const id = e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({
+      behavior: 'smooth',
+    });
+    navBackground.classList.toggle('nav__background--active');
+    navEl.classList.toggle('nav--active');
+    btnIconMenuEl.classList.toggle('btn__icon--hidden');
+    btnIconCloseEl.classList.toggle('btn__icon--hidden');
   }
 });
 

@@ -15,7 +15,12 @@
   </head>
   <body class="container">
     <button class="btn btn--mobile">
-      <span class="btn__icon--mobile"></span>
+      <svg class="btn__icon btn__icon--menu btn__icon--active">
+        <use href="src/img/sprite.svg#icon-menu"></use>
+      </svg>
+      <svg class="btn__icon btn__icon--close btn__icon--hidden">
+        <use href="src/img/sprite.svg#icon-close"></use>
+      </svg>
     </button>
     <div class="nav__background">&nbsp;</div>
     <nav class="nav nav--mobile">

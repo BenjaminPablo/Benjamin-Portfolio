@@ -13,7 +13,7 @@
 
   @include respond(phone) {
     min-height: min-content;
-    padding: 10rem 3rem;
+    padding: 17rem 3rem 10rem;
     gap: var(--gap-500);
   }
 }

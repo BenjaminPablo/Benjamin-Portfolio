@@ -12,13 +12,15 @@
     display: none;
 
     @include respond(phone) {
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background-color: white;
       height: 7rem;
       width: 7rem;
       position: fixed;
-      top: 4rem;
-      right: 4rem;
+      top: 3rem;
+      right: 3rem;
       border-radius: 50%;
       z-index: 2000;
       box-shadow: 0 1rem 3rem hsl(27, 37%, 10%, 0.3);
@@ -43,34 +45,18 @@
       }
     }
 
-    &--mobile {
-      position: relative;
-      margin-top: 3.5rem;
+    &--menu {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
 
-      &,
-      &::before,
-      &::after {
-        width: 3rem;
-        height: 0.2rem;
-        background-color: var(--clr-primary-700);
-        display: inline-block;
-      }
+    &--close {
+      width: 3rem;
+      height: 3rem;
+    }
 
-      &::before,
-      &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        transition: all 0.2s;
-      }
-
-      &::before {
-        top: -0.8rem;
-      }
-
-      &::after {
-        top: 0.8rem;
-      }
+    &--hidden {
+      display: none;
     }
   }
 

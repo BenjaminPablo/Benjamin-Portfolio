@@ -23,7 +23,7 @@ html {
   }
 
   @include respond(big-desktop) {
-    // width > 1800px?
+    // width > 2000px?
     font-size: 75%; // 1rem = 12px; 12px/16px = 75%
   }
 }

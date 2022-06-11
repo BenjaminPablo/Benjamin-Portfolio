@@ -29,13 +29,13 @@
       z-index: 1500;
       opacity: 0;
       width: 0;
+      transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
   }
 
   &--active {
     opacity: 1;
     width: 100%;
-    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
   &__background {
@@ -47,8 +47,8 @@
       width: 6rem;
       border-radius: 50%;
       position: fixed;
-      top: 4.5rem;
-      right: 4.5rem;
+      top: 3.5rem;
+      right: 3.5rem;
       background-color: var(--clr-primary-700);
       z-index: 1000;
       transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
