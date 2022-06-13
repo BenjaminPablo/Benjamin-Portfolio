@@ -35,7 +35,7 @@
       display: grid;
       row-gap: var(--gap-400);
       font-size: var(--fs-300);
-      color: var(--clr-neutral-300);
+      color: var(--clr-neutral-700);
     }
 
     &__text {
@@ -82,16 +82,7 @@
       flex-direction: column;
       gap: var(--gap-400);
       align-items: center;
-      opacity: 0.3;
       transition: all 0.2s ease-in-out;
-
-      &:hover {
-        opacity: 1;
-      }
-
-      &:hover .skills__img {
-        transform: scale(1.2);
-      }
     }
 
     &__title {

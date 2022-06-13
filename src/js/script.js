@@ -11,6 +11,8 @@ const headerEl = document.querySelector('.header');
 const navBackground = document.querySelector('.nav__background');
 const btnIconMenuEl = document.querySelector('.btn__icon--menu');
 const btnIconCloseEl = document.querySelector('.btn__icon--close');
+const skillsList = document.querySelector('.skills__list');
+const skillsImg = document.querySelectorAll('.skills__img');
 
 ////////////////////////////////////////////////////
 // Mobile functionality
@@ -68,6 +70,18 @@ const handleHover = function (e) {
 // Passing an "argument" into handler
 navMainEl.addEventListener('mouseover', handleHover.bind(0.5));
 navMainEl.addEventListener('mouseout', handleHover.bind(1));
+
+const handleHoverSkills = function (e) {
+  if (e.target.classList.contains('skills__img')) {
+    const link = e.target;
+    skillsImg.forEach(skillImg => {
+      if (skillImg !== link) skillImg.style.opacity = this;
+    });
+  }
+};
+
+skillsList.addEventListener('mouseover', handleHoverSkills.bind(0.5));
+skillsList.addEventListener('mouseout', handleHoverSkills.bind(1));
 
 //////////////////////////////////////////////
 // Sticky navigation: Intersection Observer API
