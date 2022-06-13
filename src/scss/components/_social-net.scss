@@ -6,9 +6,6 @@
 
   &--main {
     justify-content: start;
-    @include respond(phone) {
-      // display: none;
-    }
   }
 
   &__link {

@@ -81,14 +81,12 @@ const stickyNav = function (entries) {
       el.classList.add('nav__link--sticky');
     });
     btnMobile.classList.add('u-sticky');
-    btnBackground.classList.add('u-sticky');
   } else {
     navMainEl.classList.remove('nav--sticky');
     navLinksEl.forEach(el => {
       el.classList.remove('nav__link--sticky');
     });
     btnMobile.classList.remove('u-sticky');
-    btnBackground.classList.remove('u-sticky');
   }
 };
 
@@ -136,7 +134,7 @@ const slider = () => {
     slides.forEach((_, i) =>
       dotContainer.insertAdjacentHTML(
         'beforeend',
-        `<button class="btn btn__dot" data-slide="${i}"></button>`
+        `<button class="btn btn__dot" data-slide="${i}" aria-label="Button Dot"></button>`
       )
     );
   };

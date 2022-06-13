@@ -1,10 +1,6 @@
 @use '../abstracts/' as *;
 
 .nav {
-  @include respond(phone) {
-    // display: none;
-  }
-
   &--main {
     display: flex;
     align-items: center;
