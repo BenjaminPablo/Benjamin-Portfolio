@@ -116,6 +116,9 @@
     transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
     grid-column: 1;
     grid-row: 3;
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
 
     &:hover {
       transform: scale(1.1);
