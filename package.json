@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel index.html --open opera",
     "cleancss": "purgecss --css ./src/scss/main.scss --content index.html --output ./dist/",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html --dist-dir ./dist"
   },
   "repository": {
     "type": "git",
